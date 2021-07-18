@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="5aU-ip-Ziv">
+            <objects>
+                <navigationController id="fVe-H2-4yT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rFT-gb-oLx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Pj7-MR-Skd" kind="relationship" relationship="rootViewController" id="ljD-ho-VlR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zaU-Lk-ezb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="-285"/>
+        </scene>
+        <!--Chat List View Controller-->
+        <scene sceneID="C0Z-Cr-YRK">
+            <objects>
+                <viewController storyboardIdentifier="ChatListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Pj7-MR-Skd" customClass="ChatListViewController" customModule="Chat_App3_firebase_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DGI-wh-Zfw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGB-BP-gtu">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellId" rowHeight="103" id="JlV-XI-0Ki" customClass="ChatListTableViewCell" customModule="Chat_App3_firebase_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JlV-XI-0Ki" id="T7k-za-FYW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_3798" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xQe-NB-NH9">
+                                                    <rect key="frame" x="10" y="16.5" width="70" height="70"/>
+                                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xQe-NB-NH9" secondAttribute="height" multiplier="1:1" id="7IX-K7-Bfp"/>
+                                                        <constraint firstAttribute="width" constant="70" id="Kub-iU-rTv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdB-I7-2Bg">
+                                                    <rect key="frame" x="90" y="21" width="95" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23:52" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjt-Td-NQ7">
+                                                    <rect key="frame" x="366" y="20" width="38" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP2-le-c5Z">
+                                                    <rect key="frame" x="90" y="52" width="38" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemFillColor"/>
+                                            <constraints>
+                                                <constraint firstItem="PdB-I7-2Bg" firstAttribute="leading" secondItem="xQe-NB-NH9" secondAttribute="trailing" constant="10" id="Dh9-xU-IHY"/>
+                                                <constraint firstItem="QP2-le-c5Z" firstAttribute="top" secondItem="PdB-I7-2Bg" secondAttribute="bottom" constant="8" id="Yyu-ik-gWn"/>
+                                                <constraint firstItem="xQe-NB-NH9" firstAttribute="leading" secondItem="T7k-za-FYW" secondAttribute="leading" constant="10" id="avZ-dv-0AQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="gjt-Td-NQ7" secondAttribute="trailing" constant="10" id="cFe-xg-hBe"/>
+                                                <constraint firstItem="xQe-NB-NH9" firstAttribute="centerY" secondItem="T7k-za-FYW" secondAttribute="centerY" id="hbj-nX-4qu"/>
+                                                <constraint firstItem="gjt-Td-NQ7" firstAttribute="top" secondItem="T7k-za-FYW" secondAttribute="top" constant="20" id="nfp-zu-zS2"/>
+                                                <constraint firstItem="PdB-I7-2Bg" firstAttribute="top" secondItem="T7k-za-FYW" secondAttribute="topMargin" constant="10" id="yYD-L8-s94"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LatestMessageLabel" destination="PdB-I7-2Bg" id="iGF-9W-YgX"/>
+                                            <outlet property="PartnerLabel" destination="QP2-le-c5Z" id="VhZ-Na-Tb4"/>
+                                            <outlet property="TimeLabel" destination="gjt-Td-NQ7" id="GhB-zZ-prO"/>
+                                            <outlet property="UserImageView" destination="xQe-NB-NH9" id="Izh-gb-gJ0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jnd-Jn-JYx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cGB-BP-gtu" firstAttribute="top" secondItem="jnd-Jn-JYx" secondAttribute="top" id="0Lz-Xg-TYz"/>
+                            <constraint firstItem="jnd-Jn-JYx" firstAttribute="trailing" secondItem="cGB-BP-gtu" secondAttribute="trailing" id="UWg-zd-eaS"/>
+                            <constraint firstItem="cGB-BP-gtu" firstAttribute="leading" secondItem="jnd-Jn-JYx" secondAttribute="leading" id="qDJ-b2-WFF"/>
+                            <constraint firstItem="jnd-Jn-JYx" firstAttribute="bottom" secondItem="cGB-BP-gtu" secondAttribute="bottom" id="xft-mv-n54"/>
+                            <constraint firstItem="cGB-BP-gtu" firstAttribute="centerY" secondItem="DGI-wh-Zfw" secondAttribute="centerY" id="zPW-co-zSx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sc5-yz-2Xw"/>
+                    <connections>
+                        <outlet property="ChatListTableView" destination="cGB-BP-gtu" id="TJE-Ad-C0F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PJT-Yu-n78" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="-285.26785714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_3798" width="516.5" height="655"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
